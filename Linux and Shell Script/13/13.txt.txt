@@ -1,0 +1,6 @@
+13)Create a service file and run a process(say any script) using it
+
+cd etc/systemd/system
+vim my-service.service
+[Service]
+ExecStart==/home/ubuntu/my-service.bash

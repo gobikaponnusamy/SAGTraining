@@ -1,0 +1,4 @@
+5)Find the file which contain localhost under the /etc folder and redirect output to /tmp/find.out and redirect error to /tmp/find.err
+
+grep -lrw 'localhost'> /tmp/find.out
+grep -lrw localhost 2> /tmp/find.err

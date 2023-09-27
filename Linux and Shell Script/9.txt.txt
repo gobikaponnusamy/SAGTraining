@@ -1,0 +1,6 @@
+9)Update umask value to get 644 permission for files and only for the user "tuser"
+
+sudo login -f tuser
+touch demo.txt
+umask 0022
+

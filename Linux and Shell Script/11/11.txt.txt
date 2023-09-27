@@ -1,0 +1,4 @@
+11)Parse a json file and extract value of a field from it
+
+cat > file.json
+cat file.json | jq '.name'

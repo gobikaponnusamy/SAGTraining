@@ -1,0 +1,3 @@
+2)create soft/symbolic link file named /tmp/sample.txt for the file /data/sample.
+
+ln -s /data/sample.txt /tmp/sample.txt

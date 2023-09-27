@@ -1,0 +1,5 @@
+3)create script to find the file sample.txt and copy the file to /tmp/found.txt
+
+vim findcopy.bash
+chmod a+x findcopy.bash
+./findcopy.bash

@@ -1,0 +1,6 @@
+4)create loop to check the file loop.txt availability in /data directory, once the file loop.txt created under /data directory the script should exit with status code 1
+
+path="/home/gobika/MyDocuments/data/loop.txt"
+vim findloop.bash
+chmod a+x findloop.bash
+./findoop.bash

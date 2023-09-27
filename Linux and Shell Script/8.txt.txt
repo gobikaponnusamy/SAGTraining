@@ -1,0 +1,4 @@
+8)Create user named tuser with home directroy name /home/testuser and group named testgroup
+
+sudo adduser tuser
+sudo addgroup testgroup

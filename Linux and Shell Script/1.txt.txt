@@ -1,0 +1,6 @@
+pwd
+cd MyDocuments
+mkdir data
+cd data/
+cat > sample.txt
+cat sample.txt
