@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.8.1
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    user: elasticsearch
+    networks:
+      - devportal-network
+    volumes:
+      - es-vol:/usr/share/elasticsearch/data
+    hostname: devportal-elastic
+    container_name: elasticsearch  # Add a container name for reference
+    ports:
+      - "9200:9200"  # Map Elasticsearch HTTP port for access from outside Docker
+
+  devportal:
+    image: sagcr.azurecr.io/devportal:10.11
+    environment:
+      - SPRING_ELASTICSEARCH_REST_URIS=http://elasticsearch:9200  # Update to use the service name
+    networks:
+      - devportal-network
+    ports:
+      - "90:8083"
+    hostname: devportal-server
+
+networks:
+  devportal-network:
+    driver: bridge
+
+volumes:
+  es-vol:
